@@ -38,8 +38,7 @@
 
         }
 
-        var playerSelection = 'rock';
-        //var playerSelection = window.prompt("Rock! Paper! Scissors! Shoot! What did you choose?");
+        //var playerSelection = 'rock';
         function game(){
             var humanScore = 0;
             var computerScore = 0;
@@ -50,6 +49,7 @@
             console.log(rockPaperScissors(playerSelection, computerPlay()));*/
             
             for (var i = 0; i < 5; i++){
+                var playerSelection = window.prompt("What did you choose? Rock! Paper! Scissors! Shoot!");
                 var eachRound = rockPaperScissors(playerSelection, computerPlay());
                 console.log(eachRound);
                 var winner = eachRound.substr(0,8);
