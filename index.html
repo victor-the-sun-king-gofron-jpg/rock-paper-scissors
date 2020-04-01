@@ -38,9 +38,35 @@
 
         }
 
-        const playerSelection = 'rock'/*playerSelection.toLowerCase();*/
-        const computerSelection = computerPlay();
+        var playerSelection = 'rock';
+        //var playerSelection = window.prompt("Rock! Paper! Scissors! Shoot! What did you choose?");
         function game(){
+            var humanScore = 0;
+            var computerScore = 0;
+            /*console.log(rockPaperScissors(playerSelection, computerPlay()));
+            console.log(rockPaperScissors(playerSelection, computerPlay()));
+            console.log(rockPaperScissors(playerSelection, computerPlay()));
+            console.log(rockPaperScissors(playerSelection, computerPlay()));
+            console.log(rockPaperScissors(playerSelection, computerPlay()));*/
+            
+            for (var i = 0; i < 5; i++){
+                var eachRound = rockPaperScissors(playerSelection, computerPlay());
+                console.log(eachRound);
+                var winner = eachRound.substr(0,8);
+                var loser = eachRound.substr(0,9);
+                if(winner === 'You Win!'){
+                    humanScore += 1;
+                } else if(loser === 'You Lose!'){
+                    computerScore += 1;
+                }
+            }
+            if (humanScore > computerScore){
+                return `Human Wins, Computer Loses - ${humanScore}:${computerScore}`;
+            } else if(computerScore > humanScore){
+                return `Computer Wins, Human Loses - ${computerScore}:${humanScore}`;
+            } else{
+                return `It's a tie`;
+            }
         }
 
     </script>
