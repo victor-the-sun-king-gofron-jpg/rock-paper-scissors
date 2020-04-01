@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function computerPlay(){
+            /*Return Rock Paper Scissors randomly for the computer*/
+            var computerOutcome = '';
+            var options = ['rock', 'paper', 'scissors'];
+            var randomOutput = Math.floor(Math.random()*(options.length));
+            return options[randomOutput];
+        };
+
+        function rockPaperScissors(playerSelection, computerSelection){
+            /*To code a game of rock paper scissors*/
+            let playerChoice = playerSelection.toLowerCase();
+            if(playerChoice === 'rock' && computerSelection === 'scissors'){
+                return 'You Win! Rock beats Scissors';
+            } else if(playerChoice === 'rock' && computerSelection === 'paper'){
+                return 'You Lose! Paper beats Rock';
+            } else if(playerChoice === 'rock' && computerSelection === 'rock'){
+                return 'It\'s a tie! Rock is equal to Rock'; 
+            } else if(playerChoice === 'paper' && computerSelection === 'rock'){
+                return 'You Win! Paper beats Rock';
+            } else if(playerChoice === 'paper' && computerSelection === 'scissors'){
+                return 'You Lose! Scissors beats Paper';
+            } else if(playerChoice === 'paper' && computerSelection === 'paper'){
+                return 'It\'s a tie! Paper is equal to Paper';
+            } else if(playerChoice === 'scissors' && computerSelection === 'paper'){
+                return 'You Win! Scissors beats Paper';
+            } else if(playerChoice === 'scissors' && computerSelection === 'rock'){
+                return 'You Lose! Rock beats scissors';
+            } else if(playerChoice === 'scissors' && computerSelection === 'scissors'){
+                return 'It\'s a tie! Scissors is equal to Scissors';
+            } else {
+                return 'That\'s not a valid option';
+            }
+
+        }
+
+        const playerSelection = 'rock'/*playerSelection.toLowerCase();*/
+        const computerSelection = computerPlay();
+        function game(){
+        }
+
+    </script>
+</body>
+
+
+</html>
